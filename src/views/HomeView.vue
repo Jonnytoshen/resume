@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import CapabilityCard from '@/components/CapabilityCard.vue'
+import WandSparklesIcon from '@/components/icons/WandSparklesIcon.vue'
 import ResumeContacts from '@/components/ResumeContacts.vue'
 import ResumeHeader from '@/components/ResumeHeader.vue'
+import SectionTitle from '@/components/SectionTitle.vue'
 
-import { basicInfo } from '@/config'
+import { basicInfo, capabilities } from '@/config'
 </script>
 
 <template>
@@ -20,6 +23,22 @@ import { basicInfo } from '@/config'
         :github="basicInfo.contacts.github"
       />
     </ResumeHeader>
+    <section>
+      <SectionTitle class="mb-6">
+        <template v-slot:icon>
+          <WandSparklesIcon :size="20" />
+        </template>
+        能力与优势
+      </SectionTitle>
+      <div class="grid grid-cols-1 gap-4">
+        <CapabilityCard
+          v-for="capability in capabilities"
+          :key="capability.field"
+          :title="capability.field"
+          :items="capability.items"
+        />
+      </div>
+    </section>
   </div>
 </template>
 
