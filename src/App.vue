@@ -1,11 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BackgroundDecor from './components/BackgroundDecor.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <main
+    class="lg:rounded-6xl lg:shadow-root relative mx-auto max-w-5xl overflow-hidden bg-white lg:my-16"
+  >
+    <BackgroundDecor />
+    <div class="relative z-10">
+      <RouterView />
+    </div>
+  </main>
 </template>
 
 <style scoped></style>
