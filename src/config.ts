@@ -292,3 +292,12 @@ export const contributions = [
     url: 'https://github.com/pulls?q=author:Jonnytoshen',
   },
 ]
+
+export const educations = [
+  {
+    school: '成都电子科技大学',
+    period: '2012 - 2014',
+    degree: '大专',
+    major: '计算机应用技术',
+  },
+]

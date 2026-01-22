@@ -2,6 +2,7 @@
 import CapabilityCard from '@/components/CapabilityCard.vue'
 import ContributionCard from '@/components/ContributionCard.vue'
 import ContributionIcon from '@/components/icons/ContributionIcon.vue'
+import EducationIcon from '@/components/icons/EducationIcon.vue'
 import EvaluationIcon from '@/components/icons/EvaluationIcon.vue'
 import ProjectsIcon from '@/components/icons/ProjectsIcon.vue'
 import WandSparklesIcon from '@/components/icons/WandSparklesIcon.vue'
@@ -18,6 +19,7 @@ import {
   basicInfo,
   capabilities,
   contributions,
+  educations,
   personalEvaluation,
   projects,
   workExperiences,
@@ -128,6 +130,27 @@ import {
           :github="contribution.github"
         />
       </div>
+    </section>
+    <section>
+      <SectionTitle class="mb-6">
+        <template v-slot:icon>
+          <EducationIcon :size="20" />
+        </template>
+        教育背景
+      </SectionTitle>
+      <ResumeCard>
+        <ul class="list-disc space-y-2 pl-6">
+          <li v-for="(item, index) in educations" :key="index" class="space-x-2">
+            <span>{{ item.school }}</span>
+            <span>|</span>
+            <span>{{ item.degree }}</span>
+            <span>|</span>
+            <span>{{ item.major }}</span>
+            <span>|</span>
+            <span>{{ item.period }}</span>
+          </li>
+        </ul>
+      </ResumeCard>
     </section>
   </div>
 </template>
