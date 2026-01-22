@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useAttrs } from 'vue'
 import ResumeCard from './ResumeCard.vue'
-import LinkIcon from './icons/LinkIcon.vue'
 import GitHubIcon from './icons/GitHubIcon.vue'
+import GlobalIcon from './icons/GlobalIcon.vue'
 
 interface Props {
   name: string
@@ -20,7 +20,7 @@ const props = defineProps<Props>()
       <p>{{ props.description }}</p>
       <div class="flex items-center gap-10">
         <div v-if="props.url" class="inline-flex items-center gap-2">
-          <LinkIcon :size="16" class="text-indigo-400" />
+          <GlobalIcon :size="16" class="text-indigo-400" />
           <a :href="props.url" target="_blank" class="hover:text-indigo-600 hover:underline">{{
             props.url
           }}</a>
