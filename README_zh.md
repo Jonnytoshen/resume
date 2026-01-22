@@ -41,19 +41,27 @@
 
 1. 安装依赖
 
-   pnpm install
+```
+pnpm install
+```
 
 2. 启动开发服务器
 
-   pnpm dev
+```
+pnpm dev
+```
 
 3. 构建生产版本
 
-   pnpm build
+```
+pnpm build
+```
 
 4. 预览生产构建
 
-   pnpm preview
+```
+pnpm preview
+```
 
 ## 内容修改
 

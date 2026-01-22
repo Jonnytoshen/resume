@@ -41,19 +41,27 @@ A modern, engineering-ready responsive web resume project designed for frontend 
 
 1. Install dependencies
 
-   pnpm install
+```
+pnpm install
+```
 
 2. Start the dev server
 
-   pnpm dev
+```
+pnpm dev
+```
 
 3. Build for production
 
-   pnpm build
+```
+pnpm build
+```
 
 4. Preview the production build
 
-   pnpm preview
+```
+pnpm preview
+```
 
 ## Content Editing
 
