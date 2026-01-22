@@ -12,5 +12,3 @@ import BackgroundDecor from './components/BackgroundDecor.vue'
     </div>
   </main>
 </template>
-
-<style scoped></style>
