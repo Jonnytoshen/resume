@@ -1,48 +1,60 @@
-# resume
+# Responsive Web Resume
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, engineering-ready responsive web resume project designed for frontend engineers. It uses component-driven development and configuration-based rendering to make content and styling changes fast, while keeping the page structure clean and the codebase maintainable.
 
-## Recommended IDE Setup
+**English** | [中文](./README_zh.md)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Project Structure
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
+```
+.
+├── public/                     # Static assets
+│   └── favicon/                # Site icons and manifest
+├── src/
+│   ├── assets/                 # Assets
+│   ├── components/             # Reusable components
+│   │   └── icons/              # Icon components
+│   ├── router/                 # Router config
+│   ├── views/                  # Page views
+│   ├── App.vue                 # Root component
+│   ├── config.ts               # Resume content config
+│   ├── main.ts                 # App entry
+│   └── styles.css              # Global styles
+├── index.html                  # Entry HTML
+├── vite.config.ts              # Vite config
+├── tsconfig*.json              # TypeScript config
+├── eslint.config.ts            # ESLint config
+├── stylelint.config.ts         # Stylelint config
+└── package.json                # Dependencies and scripts
 ```
 
-### Compile and Hot-Reload for Development
+## Tech Stack
 
-```sh
-pnpm dev
-```
+- Vue 3
+- Vite
+- TypeScript
+- Vue Router
+- ESLint + Stylelint
+- pnpm
 
-### Type-Check, Compile and Minify for Production
+## Usage
 
-```sh
-pnpm build
-```
+1. Install dependencies
 
-### Lint with [ESLint](https://eslint.org/)
+   pnpm install
 
-```sh
-pnpm lint
-```
+2. Start the dev server
+
+   pnpm dev
+
+3. Build for production
+
+   pnpm build
+
+4. Preview the production build
+
+   pnpm preview
+
+## Content Editing
+
+Resume content is centralized in [src/config.ts](src/config.ts). Components read and render it automatically. Update personal info, experience, skills, and contact details as needed.
