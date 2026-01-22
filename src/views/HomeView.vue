@@ -28,7 +28,7 @@ import {
 </script>
 
 <template>
-  <div class="space-y-10.5 py-10.5 px-6 lg:10.5">
+  <div class="space-y-10.5 py-10.5 px-6 lg:px-10.5">
     <ResumeHeader>
       <h1 class="text-[42px] font-bold text-gray-800">{{ basicInfo.name }}</h1>
       <div class="mt-3">
