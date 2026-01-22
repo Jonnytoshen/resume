@@ -278,3 +278,17 @@ export const personalEvaluation = [
   '注重代码规范与工程化实践，具备清晰的产品思维和良好的业务抽象能力，能够在复杂需求中快速定位问题并给出合理解决方案。',
   '具备较强的自我驱动学习能力，乐于钻研新技术、关注前端生态与行业趋势，在团队协作中善于沟通、乐于分享，持续推动技术与业务的正向演进。',
 ]
+
+export const contributions = [
+  {
+    name: 'workletjs',
+    description: '基于 Angular（Signals）和 OpenLayers 构建的现代地图组件库。',
+    url: 'https://workletjs.github.io/',
+    github: 'https://github.com/workletjs/',
+  },
+  {
+    name: 'PR & issues',
+    description: '为 OpenLayers、nrwl/nx、antvis 等知名开源项目贡献代码或提交 Bug。',
+    url: 'https://github.com/pulls?q=author:Jonnytoshen',
+  },
+]

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import CapabilityCard from '@/components/CapabilityCard.vue'
+import ContributionCard from '@/components/ContributionCard.vue'
+import ContributionIcon from '@/components/icons/ContributionIcon.vue'
 import EvaluationIcon from '@/components/icons/EvaluationIcon.vue'
 import ProjectsIcon from '@/components/icons/ProjectsIcon.vue'
 import WandSparklesIcon from '@/components/icons/WandSparklesIcon.vue'
@@ -12,11 +14,18 @@ import ResumeHeader from '@/components/ResumeHeader.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
 
-import { basicInfo, capabilities, personalEvaluation, projects, workExperiences } from '@/config'
+import {
+  basicInfo,
+  capabilities,
+  contributions,
+  personalEvaluation,
+  projects,
+  workExperiences,
+} from '@/config'
 </script>
 
 <template>
-  <div class="grid grid-cols-1 gap-10.5 p-10.5">
+  <div class="space-y-10.5 p-10.5">
     <ResumeHeader>
       <h1 class="text-[42px] font-bold text-gray-800">{{ basicInfo.name }}</h1>
       <div class="mt-3">
@@ -101,6 +110,24 @@ import { basicInfo, capabilities, personalEvaluation, projects, workExperiences 
           </li>
         </ul>
       </ResumeCard>
+    </section>
+    <section>
+      <SectionTitle class="mb-6">
+        <template v-slot:icon>
+          <ContributionIcon :size="20" />
+        </template>
+        开源贡献
+      </SectionTitle>
+      <div class="space-y-4">
+        <ContributionCard
+          v-for="contribution in contributions"
+          :key="contribution.name"
+          :name="contribution.name"
+          :description="contribution.description"
+          :url="contribution.url"
+          :github="contribution.github"
+        />
+      </div>
     </section>
   </div>
 </template>
