@@ -12,5 +12,3 @@ import ResumeAvatar from './ResumeAvatar.vue'
     </div>
   </header>
 </template>
-
-<style scoped></style>
