@@ -11,6 +11,7 @@ import MarkdownField from '@/components/MarkdownField.vue'
 import ProjectExperience from '@/components/ProjectExperience.vue'
 import ResumeCard from '@/components/ResumeCard.vue'
 import ResumeContacts from '@/components/ResumeContacts.vue'
+import ResumeFooter from '@/components/ResumeFooter.vue'
 import ResumeHeader from '@/components/ResumeHeader.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
@@ -152,5 +153,6 @@ import {
         </ul>
       </ResumeCard>
     </section>
+    <ResumeFooter class="py-12" />
   </div>
 </template>
