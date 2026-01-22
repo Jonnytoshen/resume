@@ -17,7 +17,7 @@ const props = defineProps<{
 <template>
   <ResumeCard v-bind="attrs" :title="props.company">
     <div class="relative">
-      <ul class="flex items-center gap-8">
+      <ul class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-8">
         <li class="flex items-center gap-2">
           <span class="flex-none text-indigo-600">
             <UserIcon :size="16" />

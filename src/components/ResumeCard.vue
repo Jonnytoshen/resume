@@ -6,7 +6,7 @@ const props = defineProps<{
 
 <template>
   <div class="rounded-2xl border border-slate-200 p-4">
-    <div class="mb-4 flex items-center justify-between gap-4" v-if="props.title || $slots.extra">
+    <div class="mb-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between" v-if="props.title || $slots.extra">
       <div class="flex-auto" v-if="props.title">
         <h3 class="font-bold text-gray-800">{{ props.title }}</h3>
       </div>

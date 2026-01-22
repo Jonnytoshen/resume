@@ -18,18 +18,24 @@ const props = defineProps<Props>()
   <ResumeCard v-bind="attrs" :title="props.name">
     <div class="space-y-4">
       <p>{{ props.description }}</p>
-      <div class="flex items-center gap-10">
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-10">
         <div v-if="props.url" class="inline-flex items-center gap-2">
           <GlobalIcon :size="16" class="text-indigo-400" />
-          <a :href="props.url" target="_blank" class="hover:text-indigo-600 hover:underline">{{
-            props.url
-          }}</a>
+          <a
+            :href="props.url"
+            target="_blank"
+            class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-indigo-600 hover:underline"
+            >{{ props.url }}</a
+          >
         </div>
         <div v-if="props.github" class="inline-flex items-center gap-2">
           <GitHubIcon :size="16" class="text-indigo-400" />
-          <a :href="props.github" target="_blank" class="hover:text-indigo-600 hover:underline">{{
-            props.github
-          }}</a>
+          <a
+            :href="props.github"
+            target="_blank"
+            class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-indigo-600 hover:underline"
+            >{{ props.github }}</a
+          >
         </div>
       </div>
     </div>
