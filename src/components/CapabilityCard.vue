@@ -13,7 +13,7 @@ const props = defineProps<{
 
 <template>
   <ResumeCard v-bind="attrs" :title="props.title">
-    <ul class="space-y-1">
+    <ul class="space-y-2">
       <li v-for="item in props.items" :key="item" class="flex items-start gap-2">
         <span class="flex-none py-1 text-indigo-600">
           <CheckIcon :size="16" />
