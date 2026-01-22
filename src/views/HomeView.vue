@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import CapabilityCard from '@/components/CapabilityCard.vue'
+import EvaluationIcon from '@/components/icons/EvaluationIcon.vue'
 import ProjectsIcon from '@/components/icons/ProjectsIcon.vue'
 import WandSparklesIcon from '@/components/icons/WandSparklesIcon.vue'
 import WorksIcon from '@/components/icons/WorksIcon.vue'
+import MarkdownField from '@/components/MarkdownField.vue'
 import ProjectExperience from '@/components/ProjectExperience.vue'
+import ResumeCard from '@/components/ResumeCard.vue'
 import ResumeContacts from '@/components/ResumeContacts.vue'
 import ResumeHeader from '@/components/ResumeHeader.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
 
-import { basicInfo, capabilities, projects, workExperiences } from '@/config'
+import { basicInfo, capabilities, personalEvaluation, projects, workExperiences } from '@/config'
 </script>
 
 <template>
@@ -83,6 +86,21 @@ import { basicInfo, capabilities, projects, workExperiences } from '@/config'
           :highlights="project.highlights"
         />
       </div>
+    </section>
+    <section>
+      <SectionTitle class="mb-6">
+        <template v-slot:icon>
+          <EvaluationIcon :size="20" />
+        </template>
+        个人评价
+      </SectionTitle>
+      <ResumeCard>
+        <ul class="list-disc space-y-2 pl-6">
+          <li v-for="(item, index) in personalEvaluation" :key="index">
+            <MarkdownField :source="item" />
+          </li>
+        </ul>
+      </ResumeCard>
     </section>
   </div>
 </template>
