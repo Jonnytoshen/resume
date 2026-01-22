@@ -15,7 +15,9 @@
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "lint:style": "stylelint \"src/**/*.{css,vue}\"",
+    "format": "prettier --write --experimental-cli src/",
+    "prepare": "husky"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
@@ -26,6 +28,7 @@
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "@dreamsicle.io/stylelint-config-tailwindcss": "^1.1.2",
     "@tsconfig/node24": "^24.0.3",
     "@types/node": "^24.10.4",
     "@vitejs/plugin-vue": "^6.0.3",
@@ -35,11 +38,16 @@
     "eslint": "^9.39.2",
     "eslint-plugin-oxlint": "~1.38.0",
     "eslint-plugin-vue": "~10.6.2",
+    "husky": "^9.1.7",
     "jiti": "^2.6.1",
+    "lint-staged": "^16.2.7",
     "npm-run-all2": "^8.0.4",
     "oxlint": "~1.38.0",
     "prettier": "3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
+    "stylelint": "^17.0.0",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard": "^40.0.0",
     "typescript": "~5.9.3",
     "vite": "beta",
     "vite-plugin-vue-devtools": "^8.0.5",
