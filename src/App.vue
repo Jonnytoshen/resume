@@ -6,7 +6,7 @@ import BackgroundDecor from './components/BackgroundDecor.vue'
   <main
     class="lg:rounded-6xl lg:shadow-root relative mx-auto max-w-5xl overflow-hidden bg-white lg:my-16"
   >
-    <BackgroundDecor />
+    <BackgroundDecor class="print:hidden" />
     <div class="relative z-10">
       <RouterView />
     </div>

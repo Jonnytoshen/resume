@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useAttrs } from 'vue'
+
+const attrs = useAttrs()
+</script>
 
 <template>
-  <div class="absolute inset-0 z-0">
+  <div v-bind="attrs" class="absolute inset-0 z-0">
     <div
       class="blur-4xl absolute top-0 left-0 aspect-square w-6/10 -translate-y-1/2 transform rounded-full bg-indigo-600/15"
     ></div>

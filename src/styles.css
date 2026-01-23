@@ -21,4 +21,6 @@ body {
 body {
   color: var(--color-gray-500);
   background-color: var(--color-bg);
+
+  @apply print:bg-white;
 }

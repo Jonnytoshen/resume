@@ -13,7 +13,7 @@ const props = defineProps<{
 
 <template>
   <ResumeCard>
-    <div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+    <div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 print:grid-cols-1 print:gap-2">
       <div v-if="props.phone" class="flex items-center gap-3">
         <span class="flex-none">
           <PhoneIcon :size="16" />

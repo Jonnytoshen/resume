@@ -5,7 +5,7 @@ const attrs = useAttrs()
 </script>
 
 <template>
-  <div v-bind="attrs" class="flex items-center justify-center gap-4 lg:justify-start">
+  <div v-bind="attrs" class="flex items-center justify-center gap-4 lg:justify-start print:justify-start">
     <div
       class="flex size-9 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"
       v-if="$slots.icon"
