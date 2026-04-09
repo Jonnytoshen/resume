@@ -296,8 +296,8 @@ export const contributions = [
 export const educations = [
   {
     school: '成都电子科技大学',
-    period: '2012 - 2015',
-    degree: '本科',
+    period: '2012 - 2014',
+    degree: '大专',
     major: '计算机应用技术',
   },
 ]
