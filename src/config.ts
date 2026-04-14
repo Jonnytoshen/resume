@@ -24,7 +24,8 @@ export const capabilities = [
       '擅长使用 **Nx** 工具链搭建企业级 **Monorepo** 管理体系，实现多应用与多库的代码共享与边界管理，以及擅长模块化、组件化开发，推动代码复用与团队协作效率提升。',
       '熟练使用 **Ant Design for Angular**、**Angular Material**、**ECharts**、**D3.js**、**DeckGL**，实现数据驱动型可视化与大屏交互。',
       '深入 **OpenLayers** 与 **Cesium**，具备二维/三维地图集成、空间分析、高性能渲染与业务图层抽象能力。',
-      '具备从零设计并维护开源级组件库的能力，如主导开发了基于 **OpenLayers** 的 **Angular** 地图组件库 **Workletjs**，封装了 70+ 可复用组件。',
+      '具备从零设计并维护开源级组件库的能力，主导开发开源地图库 **Workletjs**，并持续维护发布流程与文档体系。',
+      '持续研究 **React Hooks** 与 **Vue Composable** 的设计思路，并在 Angular 项目中实践组合式能力封装，用于状态复用与生命周期管理。',
     ],
   },
   {
@@ -47,9 +48,9 @@ export const capabilities = [
   {
     field: '优秀的工程素养与开源贡献者',
     items: [
-      '擅长使用 **GitHub Copilot** 辅助开发，践行 **Vibe Coding** 理念，在保证代码质量的同时追求极致的开发体验。',
+      '使用 **GitHub Copilot** 辅助编码与文档编写，在保证质量前提下提升开发效率。',
       '具备清晰的产品思维，能主导从 **Figma** 原型设计到最终部署运维的全流程工作，保障设计到实现的一致性。',
-      '积极参与开源生态建设，为 **OpenLayers**、**nrwl/nx**、**antvis** 等知名项目贡献代码或提交 Bug，展现了强大的技术钻研与解决复杂问题的能力。',
+      '持续参与 **OpenLayers**、**nrwl/nx**、**antvis** 等开源生态，提交过代码与问题反馈。',
     ],
   },
 ]
@@ -67,48 +68,40 @@ export const workExperiences = [
     period: '2018.06 - 2023.07',
     job: '前端开发工程师',
     description:
-      '负责公司主要产品的 PC 端与 H5 前端开发及性能优化，并参与课题研究汇报类应用的构建。协助开发互联网数据抓取脚本，支持业务数据采集与分析。同时参与软著和高新资质等材料的整理与编制工作，为公司认证与申报提供技术支持。',
+      '负责公司核心产品的 PC 端及 H5 前端开发与性能优化，并参与课题研究汇报类应用的构建；协助开发互联网数据抓取脚本，支撑业务数据的采集与分析；同时参与软件著作权、高新技术企业资质等申报材料的整理与编制工作，为公司的资质认证与项目申报提供技术支持。',
   },
   {
     company: '北京中盈安信技术服务股份有限公司',
     period: '2016.06 - 2018.05',
     job: '前端开发工程师',
     description:
-      '参与 InSAR 数据平台的前端研发工作，构建基于 Gulp 的前端脚手架，提升工程化效率；参与前端技术选型与经验总结，并为其他团队提供前端技术支援。',
+      '参与 InSAR 数据平台的前端研发，搭建基于 Gulp 的前端脚手架，有效提升工程化效率；负责“外业调查助手（NativeScript）”项目的开发与迭代维护；参与前端技术选型与经验总结，并为其他团队提供前端技术支持。',
   },
 ]
 
 export const projects = [
   {
     id: 1,
-    name: 'Workletjs - Angular地图组件库',
-    role: '创始人 & 核心维护者',
+    name: 'Workletjs（开源 Angular 地图库）',
+    role: '项目发起人 & 核心维护者',
     period: '2025.10 - 至今',
     description:
-      '主导设计并开发了 Workletjs，一个基于 OpenLayers 的 Angular 地图组件库，致力于提供与 OpenLayers 无缝集成的地图解决方案。通过封装 70+ 可复用组件，显著降低交互式地图应用的开发门槛与复杂度。',
+      '主导设计并开发了 Workletjs，一个基于 OpenLayers 的 Angular 地图组件库，致力于提供与 OpenLayers 无缝集成的地图解决方案。通过封装 90+ 可复用组件，显著降低交互式地图应用的开发门槛与复杂度。',
     link: 'https://workletjs.github.io/',
     techStack: [
-      'Typescript',
-      'Angular',
-      'Angular Material',
-      'Tailwind CSS',
-      'OpenLayers',
-      'Nx Monorepo',
-      'ESLint',
-      'Prettier',
-      'Vitest',
+      'Typescript', 'Angular', 'OpenLayers', 'Tailwind CSS', 'Nx Monorepo', 'Vitest', 'GitHub Actions', 'pnpm'
     ],
     responsibilities: [
-      '采用 Nx Monorepo 统一管理核心库、文档站点及示例应用，优化模块依赖与项目协作结构。',
-      '设计并实现覆盖地图、图层、交互、控件等模块的组件体系，支持高度定制化地图功能。',
-      '基于 Angular Signal 实现响应式状态驱动，将 OpenLayers 的命令式操作转换为声明式组件，使地图状态管理更直观，并依托 Signal 的细粒度更新优化渲染性能。',
-      '集成 ESLint + Prettier 保障代码质量与风格统一，引入 Vitest 作为单元测试框架，确保组件稳定性。',
+      '主导从 0 到 1 搭建企业级地图组件库，基于 Nx Monorepo 设计多包架构，沉淀 90+ 可独立发布的模块入口，支持按需引入与规模化扩展。',
+      '借鉴 React Hooks 与 Vue Composable 思想，抽象 useXxxHostRef 组合式宿主能力层，统一处理 Map/LayerGroup/OverviewMap 等多层级挂载关系，显著降低组件耦合与扩展成本。',
+      '建立声明式 Angular 组件与命令式 OpenLayers 对象的桥接机制，通过渲染后初始化、微任务挂载、生命周期清理与事件解绑策略，保障动态装配场景下的稳定性和资源安全。',
+      '构建端到端工程质量体系：92 个单元测试覆盖核心模块，PR 阶段执行 Lint/Test/Build 质量门禁并接入 CodeQL 安全扫描，持续提升可维护性和交付可靠性。',
+      '打通开源发布链路：实现基于 Tag 的 npm 自动发布（OIDC Trusted Publishing）与文档站 latest/preview/version 多环境部署，形成持续发布机制。',
       '利用 GitHub Copilot 根据组件逻辑快速生成单元测试，对生成的单元测试代码进行审查。以及使用其辅助编写项目及组件文档。',
       '基于 NgDoc 构建项目文档站点，结合 Angular Material 与 Tailwind CSS 实现响应式 UI 与现代化交互体验。',
-      '搭建 GitHub Actions CI/CD 流水线，自动化实现代码检查、构建与部署（发布）流程，提升开发效率与交付质量。',
     ],
     highlights: [
-      '从零完成项目架构设计与核心代码开发，推动项目快速迭代并形成完整组件生态。',
+      '引入 React Hooks/Vue Composable 的核心思想（组合式能力抽象、生命周期副作用管理、响应式状态同步）。',
       '通过模块化、文档化与自动化工程实践，为后续社区贡献与项目扩展奠定可持续维护基础。',
       '探索前端 GIS 与 Angular 深度集成方案，为复杂业务场景下的地图可视化提供开源技术选项。',
     ],
@@ -121,24 +114,18 @@ export const projects = [
     description:
       '羲和自动报告系统是一套面向新能源发电项目的自动化、辅助编写报告平台，覆盖风电与光伏项目前期分析、指标计算与标准化报告生成流程，通过前后端协同与模板化机制显著提升报告编制效率与一致性。',
     techStack: [
-      'Nx Monorepo',
-      'Angular',
-      'NgRx',
-      'Ant Design for Angular',
-      'NestJS',
-      'Nest Commander',
-      'MongoDB',
-      'Mongoose',
-      'ECharts',
+      'Nx Monorepo', 'Angular', 'NgRx', 'Ant Design for Angular', 'NestJS', 'Nest Commander', 'MongoDB', 'ECharts'
     ],
     responsibilities: [
       '基于 Nx 构建前后端统一的 Monorepo 工程结构，集中管理 Angular 前端应用、NestJS 后端服务、CLI 工具及共享业务库，明确应用（Apps）与领域库（Libs）的边界，提升多项目协作效率与代码可维护性。',
       '以 Angular 作为核心前端框架，结合 NgRx 构建可预测的状态管理模型，使用 Ant Design for Angular 搭建高度一致的业务 UI 体系，支撑复杂参数配置、数据录入与报告生成流程。',
       '负责自动报告系统 Web 端核心功能的设计与实现，包括项目参数录入、数据校验、指标结果展示、模板选择与报告生成流程引导，确保复杂业务场景下的良好可用性与可扩展性。',
-      '基于 Nest Commander 开发“集中式风电项目自动报告”CLI 工具，并将其作为 Nx Monorepo 中的独立应用，与 Web 端共享核心业务逻辑与数据模型，用于验证自动报告业务在无界面场景下的可行性。',
-      '推动 ECharts SSR 在NestJS服务中的集成，通过Monorepo的共享类型定义确保前后端数据模型一致性。',
+      '基于 Nest Commander 开发“集中式风电项目自动报告”的 CLI 工具，并将其作为 Nx Monorepo 中的独立应用，与 Web 端共享核心业务逻辑与数据模型，用于验证自动报告业务在无界面场景下的可行性。',
+      '推动 ECharts SSR 在 NestJS 服务中的集成，通过 Monorepo 的共享类型定义确保前后端数据模型一致性。',
       '参与制定多类型报告模板及其语法规则，设计模板版本管理规范；在前端实现模板管理与配置界面，支持模板迭代与历史报告回溯。',
       '基于 NestJS + MongoDB 构建自动报告系统后台服务，部分计算模型通过 mongoose virtual 属性抽象为业务指标；前端专注于数据指标展示，形成清晰的前后端职责边界。',
+      '参与基于 Docker Compose 的部署流程落地，协同完成前端应用与 NestJS 服务的镜像构建和服务编排。',
+      '参与维护 Docker Compose 配置与环境变量，支持版本发布、环境一致性校验和部署问题排查。',
     ],
     highlights: [
       '通过自动化数据整合与模板化生成机制，将风电/光伏项目前期报告编制流程由人工撰写转为配置驱动，报告生成效率提升 60%+，显著降低重复性人力成本。',
@@ -153,19 +140,7 @@ export const projects = [
     description:
       '“羲和前期评估系统”是一款服务于新能源项目前期开发的全链路评估与辅助决策平台。系统通过整合中尺度气象数据与高分辨率地形数据，实现对风资源分布、发电潜力及收益率的精准量化分析，帮助客户快速判断场址开发价值，提升项目决策效率与科学性。',
     techStack: [
-      'Typescript',
-      'Angular',
-      'Angular Material',
-      'Ant Design for Angular',
-      'NgRx',
-      'OpenLayers',
-      'ECharts',
-      'NestJS',
-      'MongoDB',
-      'Nx monorepo',
-      'ESLint',
-      'Prettier',
-      'Playwright',
+      'Typescript', 'Angular', 'Angular Material', 'NgRx', 'OpenLayers', 'ECharts', 'NestJS', 'MongoDB', 'Nx monorepo', 'Playwright', 'Docker'
     ],
     responsibilities: [
       '负责新能源项目前期开发的资源评估与辅助决策系统前端架构设计与核心功能开发。',
@@ -175,9 +150,10 @@ export const projects = [
       '使用 ECharts 对气象资源、统计指标进行分析与可视化展示，支持多维度对比与趋势分析。',
       '主导设计并落地前端 可复用组件库（表单控件、数据展示组件等），减少重复代码约 30%，显著提升开发效率与代码一致性。',
       '参与并主导部分后端能力建设，基于 NestJS + MongoDB 开发项目信息与配置参数管理服务，并通过聚合 Python 等语言实现的后端服务，为前端提供更贴合业务的接口，降低前端逻辑复杂度、提升响应速度与用户体验。',
-      '建立前端测试体系，使用 Jest 编写单元测试，核心模块覆盖率约 30%；使用 Playwright 完成关键业务路径的端到端测试，保障核心流程稳定性。',
-      '针对 H5 场景进行性能专项优化，通过 路由懒加载、Tree Shaking、关键 CSS 内联、资源压缩（Gzip） 等手段，将首屏加载时间从 12s 优化至约 3s。',
-      '主导前端应用与 Sentry 的集成，建立实时错误监控与告警机制；通过分析错误堆栈与用户会话，将生产环境关键问题的平均定位与修复时间缩短 60%，用户侧未捕获异常数量季度环比下降 40%。',
+      '在核心模块使用 Jest 覆盖单元测试，并通过 Playwright 覆盖关键业务路径。',
+      '通过懒加载、关键 CSS 内联与资源压缩，将 H5 首屏加载时间从 12s 优化到约 3s。',
+      '主导前端应用与 Sentry 的集成，建立实时错误监控与告警机制。接入 Sentry 后，生产问题定位效率提升，线上异常趋势明显下降。',
+      '配合团队使用 Docker Compose 搭建部署环境，主要参与前端相关容器配置与联调支持。参与部署流程中的配置维护与上线验证，协助排查环境问题。',
     ],
     highlights: [
       '成功交付具备气象数据分析、地图可视化、财务概算与辅助决策能力的一体化评估系统，支持新能源项目前期快速评估与科学决策。',
@@ -193,14 +169,7 @@ export const projects = [
     description:
       '新能源协作平台是一个面向新能源项目（风电、光伏等）开发选址、空间分析和项目管理的综合协作系统，为新能源项目开发提供全流程的数字化支持。',
     techStack: [
-      'Angular',
-      'Ant Design for Angular',
-      'OpenLayers',
-      'NestJS',
-      'TypeORM',
-      'PostgreSQL',
-      'Keycloak',
-      'Turf.js',
+      'Angular', 'Ant Design for Angular', 'OpenLayers', 'NestJS', 'TypeORM', 'PostgreSQL', 'Keycloak', 'Turf.js'
     ],
     responsibilities: [
       '基于 Angular 搭建前端应用架构，使用 Ant Design for Angular 构建统一、可复用的业务 UI 组件，负责项目管理、地图工作空间及坐标工具模块的核心开发。',
@@ -245,14 +214,7 @@ export const projects = [
     description:
       '面向新能源项目规划管理的综合可视化服务平台，围绕风电、光伏新能源资源分布、统计分析需求，构建集地图、图表与大屏展示于一体的可视化应用，为区域新能源开发与管理提供数据支撑。',
     techStack: [
-      'Angular',
-      'TypeScript',
-      'RxJS',
-      'OpenLayers',
-      'ECharts',
-      'D3.js',
-      'DeckGL',
-      'Webpack',
+      'Angular', 'TypeScript', 'RxJS', 'OpenLayers', 'ECharts', 'D3', 'DeckGL', 'Webpack'
     ],
     responsibilities: [
       '使用 Figma 进行可交互原型与 UI 设计，参与大屏布局、交互流程及组件规范制定，保障设计到实现的一致性。针对新能源数据展示场景，设计适配大屏的地图 + 图表联动交互方案。',
@@ -267,7 +229,29 @@ export const projects = [
     highlights: [
       '成功整合多个可视化库（OpenLayers、ECharts、D3.js、DeckGL），形成统一的技术栈。',
       '攻克大规模地理数据在前端加载速度的性能瓶颈，显著提升十万级数据量下的交互流畅度。',
-      '创新性应用COG瓦片金字塔技术，解决传统GeoTIFF文件加载缓慢的问题。',
+      '创新性应用 COG 瓦片金字塔技术，解决传统 GeoTIFF 文件加载缓慢的问题。',
+    ],
+  },
+  {
+    id: 7,
+    name: '外业调查助手（APP）',
+    role: '核心开发人员',
+    period: '2017.10 - 2018.05',
+    description:
+      '针对地质灾害巡检场景开发的 App，旨在解决野外环境下高精度轨迹采集与复杂表单录入的痛点。',
+    techStack: ['NativeScript', 'Angular', 'TypeScript', '高德地图 SDK（原生封装）', '科大讯飞语音转文字 SDK'],
+    responsibilities: [
+      '从 0 到 1 使用 NativeScript CLI (tns) 搭建 Angular 技术栈的跨平台移动应用，完成项目初始化、工程配置与基础架构。',
+      '基于高德地图原生 SDK 封装 NativeScript 插件，实现 AMapView 组件基础属性绑定与常用事件桥接，满足外业巡线地图展示与交互需求。',
+      '设计巡线路线上报模块，通过轨迹点抽稀算法减少冗余节点，实测网络传输与本地存储数据量降低 50% 以上，有效节省带宽与存储资源。',
+      '针对崩塌、滑坡、泥石流等不同地质灾害类型，分别设计对应的动态上报表单，简化填报路径与交互层级，提升外业人员数据采集效率。',
+      '集成科大讯飞语音转文字 SDK，支持在表单文本字段中通过语音输入快速完成长文本录入，改善外业场景下的文字输入体验。',
+      '调用设备原生相机实现现场照片拍摄功能，并在上传前对图片进行前端压缩处理，在保证可识别度的前提下进一步降低带宽占用。',
+    ],
+    highlights: [
+      '轨迹数据经抽稀处理后传输量与存储占用降低 50% 以上，有效节省野外弱网环境下的带宽与存储成本。',
+      '差异化灾害表单设计简化填报路径，结合语音转文字输入，显著提升外业人员数据采集与长文本录入效率。',
+      '现场照片前端压缩上传机制，在保证可用画质的前提下进一步减少网络开销。',
     ],
   },
 ]
@@ -288,7 +272,7 @@ export const contributions = [
   },
   {
     name: 'PR & issues',
-    description: '为 OpenLayers、nrwl/nx、antvis 等知名开源项目贡献代码或提交 Bug。',
+    description: '持续参与 OpenLayers、nrwl/nx、antvis 等开源生态，提交过代码与问题反馈。',
     url: 'https://github.com/pulls?q=author:Jonnytoshen',
   },
 ]
@@ -296,7 +280,7 @@ export const contributions = [
 export const educations = [
   {
     school: '成都电子科技大学',
-    period: '2012 - 2014',
+    period: '2012.03 - 2014.06',
     degree: '大专',
     major: '计算机应用技术',
   },
