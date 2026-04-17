@@ -6,7 +6,7 @@ export const basicInfo = {
   gender: '男',
   birth: '1993/10',
   city: '北京',
-  job: '前端开发工程师',
+  job: '前端/全栈开发工程师',
   experience: now.getFullYear() - startWork.getFullYear(),
   contacts: {
     phone: '(+86) 13241468893',
@@ -15,17 +15,16 @@ export const basicInfo = {
   },
 } as const
 
+export const aboutMe = '拥有 10 年前端/全栈开发经验的资深工程师，专注于企业级前端架构、Web GIS 可视化与工程化提效。擅长运用 Monorepo、DDD 后端服务设计（NestJS）与自动化测试体系解决复杂业务场景下的协作与交付难题。主导开源 GIS 组件库 [workletjs](https://github.com/workletjs/workletjs)，持续探索现代前端工程最佳实践。期待加入一个重视技术深度与业务价值的团队，共同构建高质量的数字产品。';
+
 // Capabilities and Strengths
 export const capabilities = [
   {
     field: '核心前端架构与框架能力',
     items: [
-      '精通 **Angular** 框架及其生态系统，包括最新的 **Signal** 响应式状态驱动、**RxJS** 异步流处理以及 **NgRx** 企业级状态管理。',
-      '擅长使用 **Nx** 工具链搭建企业级 **Monorepo** 管理体系，实现多应用与多库的代码共享与边界管理，以及擅长模块化、组件化开发，推动代码复用与团队协作效率提升。',
-      '熟练使用 **Ant Design for Angular**、**Angular Material**、**ECharts**、**D3.js**、**DeckGL**，实现数据驱动型可视化与大屏交互。',
-      '深入 **OpenLayers** 与 **Cesium**，具备二维/三维地图集成、空间分析、高性能渲染与业务图层抽象能力。',
-      '具备从零设计并维护开源级组件库的能力，主导开发开源地图库 **Workletjs**，并持续维护发布流程与文档体系。',
-      '持续研究 **React Hooks** 与 **Vue Composable** 的设计思路，并在 Angular 项目中实践组合式能力封装，用于状态复用与生命周期管理。',
+      '**企业级前端架构设计**：精通组件化、模块化设计模式，具备从零构建 Monorepo 管理体系的经验（Nx 工具链），擅长多应用代码共享与边界治理。',
+      '**复杂交互与数据可视化**：深耕 Web GIS（OpenLayers/Cesium）与数据驱动型大屏（ECharts/D3/DeckGL），能够应对十万级数据量的高性能渲染挑战。',
+      '**现代响应式状态管理**：深入理解 Signal 响应式编程与 RxJS 异步流处理，并持续研究 React Hooks/Vue Composable 的组合式设计思想，具备跨框架抽象能力。',
     ],
   },
   {
@@ -112,7 +111,7 @@ export const projects = [
     role: '前端开发技术负责人',
     period: '2024.07 - 至今',
     description:
-      '羲和自动报告系统是一套面向新能源发电项目的自动化、辅助编写报告平台，覆盖风电与光伏项目前期分析、指标计算与标准化报告生成流程，通过前后端协同与模板化机制显著提升报告编制效率与一致性。',
+      '羲和自动报告系统是一套面向新能源发电项目的自动化、辅助编写报告平台，覆盖风电与光伏项目前期分析、指标计算与标准化报告生成流程。通过自动化与模板化，将风电/光伏报告编制效率提升 60%+ ，核心代码复用率 70%+。',
     techStack: [
       'Nx Monorepo', 'Angular', 'NgRx', 'Ant Design for Angular', 'NestJS', 'Nest Commander', 'MongoDB', 'ECharts'
     ],
@@ -281,13 +280,6 @@ export const educations = [
   {
     school: '成都电子科技大学',
     period: '2012.03 - 2014.06',
-    degree: '大专',
     major: '计算机应用技术',
-  },
-  {
-    school: '北京邮电科技大学',
-    period: '2020.09 - 2023.06',
-    degree: '本科',
-    major: '项目工程管理',
   },
 ]

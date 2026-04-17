@@ -43,6 +43,24 @@ const props = defineProps<Props>()
           }}</a>
         </div>
       </div>
+      <div v-if="props.highlights && props.highlights.length > 0">
+        <div class="mb-3 flex items-center gap-2 font-medium">
+          <SparklesIcon :size="16" class="text-indigo-400" />
+          <span>项目成果与价值：</span>
+        </div>
+        <ul class="list-disc space-y-2 pl-6">
+          <li v-for="item in props.highlights" :key="item">{{ item }}</li>
+        </ul>
+      </div>
+      <div v-if="props.responsibilities && props.responsibilities.length > 0">
+        <div class="mb-3 flex items-center gap-2 font-medium">
+          <TaskIcon :size="16" class="text-indigo-400" />
+          <span>核心职责与产出：</span>
+        </div>
+        <ul class="list-disc space-y-2 pl-6">
+          <li v-for="item in props.responsibilities" :key="item">{{ item }}</li>
+        </ul>
+      </div>
       <div v-if="props.techStack && props.techStack.length > 0">
         <div class="mb-3 flex items-center gap-2 font-medium">
           <TechnologyStackIcon :size="16" class="text-indigo-400" />
@@ -54,24 +72,6 @@ const props = defineProps<Props>()
             <span class="px-2" v-if="index + 1 < props.techStack.length">|</span>
           </template>
         </div>
-      </div>
-      <div v-if="props.responsibilities && props.responsibilities.length > 0">
-        <div class="mb-3 flex items-center gap-2 font-medium">
-          <TaskIcon :size="16" class="text-indigo-400" />
-          <span>核心职责与产出：</span>
-        </div>
-        <ul class="list-disc space-y-2 pl-6">
-          <li v-for="item in props.responsibilities" :key="item">{{ item }}</li>
-        </ul>
-      </div>
-      <div v-if="props.highlights && props.highlights.length > 0">
-        <div class="mb-3 flex items-center gap-2 font-medium">
-          <SparklesIcon :size="16" class="text-indigo-400" />
-          <span>项目成果与价值：</span>
-        </div>
-        <ul class="list-disc space-y-2 pl-6">
-          <li v-for="item in props.highlights" :key="item">{{ item }}</li>
-        </ul>
       </div>
     </div>
   </ResumeCard>

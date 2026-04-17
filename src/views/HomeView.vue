@@ -17,6 +17,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 import WorkExperience from '@/components/WorkExperience.vue'
 
 import {
+  aboutMe,
   basicInfo,
   capabilities,
   contributions,
@@ -28,7 +29,7 @@ import {
 </script>
 
 <template>
-  <div class="space-y-10.5 py-10.5 px-6 lg:px-10.5 print:px-10.5">
+  <div class="space-y-10.5 px-6 py-10.5 lg:px-10.5 print:px-10.5">
     <ResumeHeader>
       <h1 class="text-[42px] font-bold text-gray-800">{{ basicInfo.name }}</h1>
       <div class="mt-3">
@@ -42,6 +43,17 @@ import {
         :github="basicInfo.contacts.github"
       />
     </ResumeHeader>
+    <section>
+      <SectionTitle class="mb-6">
+        <template v-slot:icon>
+          <WandSparklesIcon :size="20" />
+        </template>
+        关于我
+      </SectionTitle>
+      <ResumeCard>
+        <MarkdownField :source="aboutMe" />
+      </ResumeCard>
+    </section>
     <section>
       <SectionTitle class="mb-6">
         <template v-slot:icon>
@@ -143,8 +155,6 @@ import {
         <ul class="list-disc space-y-2 pl-6">
           <li v-for="(item, index) in educations" :key="index" class="space-x-2">
             <span>{{ item.school }}</span>
-            <span>|</span>
-            <span>{{ item.degree }}</span>
             <span>|</span>
             <span>{{ item.major }}</span>
             <span>|</span>

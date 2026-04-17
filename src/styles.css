@@ -24,3 +24,13 @@ body {
 
   @apply print:bg-white;
 }
+
+a {
+  color: var(--color-blue-500);
+  text-underline-offset: 0.2rem;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-blue-600);
+}
