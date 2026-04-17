@@ -284,4 +284,10 @@ export const educations = [
     degree: '大专',
     major: '计算机应用技术',
   },
+  {
+    school: '北京邮电科技大学',
+    period: '2020.09 - 2023.06',
+    degree: '本科',
+    major: '项目工程管理',
+  },
 ]
