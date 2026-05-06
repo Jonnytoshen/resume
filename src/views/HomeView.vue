@@ -4,6 +4,7 @@ import ContributionCard from '@/components/ContributionCard.vue'
 import ContributionIcon from '@/components/icons/ContributionIcon.vue'
 import EducationIcon from '@/components/icons/EducationIcon.vue'
 import EvaluationIcon from '@/components/icons/EvaluationIcon.vue'
+import GrowthIcon from '@/components/icons/GrowthIcon.vue'
 import ProjectsIcon from '@/components/icons/ProjectsIcon.vue'
 import WandSparklesIcon from '@/components/icons/WandSparklesIcon.vue'
 import WorksIcon from '@/components/icons/WorksIcon.vue'
@@ -46,7 +47,7 @@ import {
     <section>
       <SectionTitle class="mb-6">
         <template v-slot:icon>
-          <WandSparklesIcon :size="20" />
+          <GrowthIcon :size="20" />
         </template>
         关于我
       </SectionTitle>
